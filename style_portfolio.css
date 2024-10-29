@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style_portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="portfolio-container">
+        <!-- Navigation and Main Content Sections -->
+        <ul class="navlist">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Service</a></li>
+        </ul>
+        <div class="left-container">
+            <div class="icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="content">
+                <p class="intro">Hi! I Am <span>Vrinda</span> </p>
+                <h1> Web Developer.</h1>
+                <p class="details">I am currently pursuing a BTech in Computer Science Engineering from Indore Institute Of Science And Technology and I am in 3rd year. </p>
+                <div class="btn-container">
+                    <button>Hire Me</button>
+                    <button>View Project</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <img src="protfolio.jpg" alt="Vrinda's Photo" class="profile-photo">
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-item project-html">HTML Portfolio</div>
+            <div class="project-item project-css">CSS Animations</div>
+            
+            <div class="project-item project-java">Java Calculator</div>
+            <div class="project-item project-sql">SQL Database</div>
+        </div>
+    </section>
+
+    <!-- Skills Section Directly Below Projects -->
+    <section class="skills-section">
+        <input type="checkbox" id="skills-toggle" class="skills-checkbox">
+        <label for="skills-toggle" class="skills-button">My Skills ▼</label>
+        <div class="skills-scroll">
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>C++</li>
+                <li>C</li>
+                <li>Java</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
