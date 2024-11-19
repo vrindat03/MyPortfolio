@@ -1,71 +1,253 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style_portfolio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <div class="portfolio-container">
-        <!-- Navigation and Main Content Sections -->
-        <ul class="navlist">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Service</a></li>
-        </ul>
-        <div class="left-container">
-            <div class="icons">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram"></i>
-            </div>
-            <div class="content">
-                <p class="intro">Hi! I Am <span>Vrinda</span> </p>
-                <h1> Web Developer.</h1>
-                <p class="details">I am currently pursuing a BTech in Computer Science Engineering from Indore Institute Of Science And Technology and I am in 3rd year. </p>
-                <div class="btn-container">
-                    <button>Hire Me</button>
-                    <button>View Project</button>
-                </div>
-            </div>
-        </div>
-        <div class="right-container">
-            <img src="protfolio.jpg" alt="Vrinda's Photo" class="profile-photo">
-        </div>
-    </div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project-item project-html">HTML Portfolio</div>
-            <div class="project-item project-css">CSS Animations</div>
-            
-            <div class="project-item project-java">Java Calculator</div>
-            <div class="project-item project-sql">SQL Database</div>
-        </div>
-    </section>
+body {
+    background-color: #f5f7fa;
+}
 
-    <!-- Skills Section Directly Below Projects -->
-    <section class="skills-section">
-        <input type="checkbox" id="skills-toggle" class="skills-checkbox">
-        <label for="skills-toggle" class="skills-button">My Skills ▼</label>
-        <div class="skills-scroll">
-            <ul class="skills-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>C++</li>
-                <li>C</li>
-                <li>Java</li>
-                <li>SQL</li>
-            </ul>
-        </div>
-    </section>
-</body>
-</html>
+/* Portfolio Container */
+.portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navigation Styles */
+.navlist {
+    list-style: none;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+.navlist li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.navlist li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4a4a4a;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background-color: #ffe4e1;
+    transition: all 0.3s ease;
+}
+
+.navlist li a:hover,
+.navlist li a.active {
+    background-color: #ff7f50;
+    color: white;
+}
+
+/* Left Container Styles */
+.left-container {
+    flex: 1;
+    position: relative;
+}
+
+.icons {
+    margin-bottom: 50px;
+}
+
+.icons i {
+    font-size: 25px;
+    color: #ff69b4;
+    margin-right: 20px;
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #ff4500;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.content {
+    margin-left: 50px;
+    color: #444;
+}
+
+.intro {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.intro span {
+    color: #ff69b4;
+}
+
+h1 {
+    font-size: 50px;
+    color: #ff69b4; /* Pink color for heading */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #ffd700;
+}
+
+.details {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    background: linear-gradient(135deg, #ffa500, #f0e68c);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+
+.btn-container button {
+    background-color: #00ced1;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin-right: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 206, 209, 0.3);
+}
+
+.btn-container button:hover {
+    background-color: #008b8b;
+    transform: scale(1.1);
+}
+
+/* Right Container Styles */
+.right-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 5px solid #ff69b4;
+    animation: photoHover 8s infinite alternate;
+}
+
+@keyframes photoHover {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1.05) rotate(5deg);
+    }
+}
+
+/* Education Section Styling */
+.education-section {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-section h2 {
+    font-size: 2.5rem;
+    color: #ff69b4; /* Pink heading */
+    margin-bottom: 15px;
+}
+
+.education-details {
+    font-size: 1.2rem;
+    color: #ffa500; /* Orange text for the details */
+    line-height: 1.8;
+}
+
+/* Projects Section Styling */
+.projects-section {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    color: #ff69b4; /* Pink heading */
+    margin-bottom: 15px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-item {
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    background-color: #ffa500;
+    cursor: pointer;
+}
+
+/* Skills Section Styling */
+.skills-section {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Same shadow effect */
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: #ff69b4; /* Pink heading */
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Added space between skill items */
+}
+
+.skill-item {
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #ff7f50; /* Same background color for skill items */
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Same shadow effect */
+    transition: none; /* Removed transition for hover effect */
+}
+
+
+
